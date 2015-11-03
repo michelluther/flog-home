@@ -1,17 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Florian Große</title>
-    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <h1>Hello again 2</h1>
-
-    <script src="jquery/dist/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Florian Große</title>
+		<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="footer" class="navbar navbar-default navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li><a href="#get_started">Get started</a></li>
+							<li><a href="#abstract">About</a>
+							<li><a href="#features">Features</a>
+							<li><a href="#contact">Contact</a>
+							<li><a href="#impress">Impress</a></li>
+						</ul>
+					</div>
+					<a href="#" class="pull-right logo"><img src="umap_logo_sm.png" /> </a>
+				</div>
+			</div>
+		</div>
+		<h1>Florian Große - Steuerfachwirt</h1>
+		<div class="row">
+			<div class="span12 text-center anchor">
+				<a name="get_started"></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12 text-center">
+				<h2>Get started right away!</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div clasS="span4 text-center">
+				<p>You can download the UMAP components from github and start using it
+				right away!</p>
+				<a href="https://github.com/michelluther/umap"
+				class="btn btn-primary"><i class="icon-download-alt icon-white"></i> Get UMAP from Github</a>
+			</div>
+			<div clasS="span4 text-center">
+				<p>We try to document the project in our Wiki so it is very easy to
+				use and contribute to.</p>
+				<a href="	ttps://github.com/michelluther/umap/wiki"
+				class="btn btn-primary"><i class="icon-book icon-white"></i> Go to Documentation</a>
+			</div>
+			<div class="span4 text-center">
+				<p>We are very happy about every person who contributes to the
+					betterment of UMAP. Be it by filing bugs, or by fixing them or even
+				by implementing new features</p>
+				<a href="https://github.com/michelluther/umap/issues"
+				class="btn btn-primary">Contribute</a>
+			</div>
+		</div>
+		<?php include 'views/banner.php';?>
+		<div id="content" class="container">
+			<?php include 'views/get_started.php'; ?>
+			<?php include 'views/abstract.php'; ?>
+			<?php include 'views/features.php'; ?>
+			
+			<?php include 'views/contact.php'; ?>
+		</div>
+		<script src="jquery/dist/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+	</body>
 </html>
