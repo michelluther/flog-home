@@ -1,71 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Florian Große</title>
-		<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	</head>
-	<body>
-		<div id="footer" class="navbar navbar-default navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<div class="nav-collapse collapse">
-						<ul class="nav">
-							<li><a href="#get_started">Get started</a></li>
-							<li><a href="#abstract">About</a>
-							<li><a href="#features">Features</a>
-							<li><a href="#contact">Contact</a>
-							<li><a href="#impress">Impress</a></li>
-						</ul>
-					</div>
-					<a href="#" class="pull-right logo"><img src="umap_logo_sm.png" /> </a>
-				</div>
-			</div>
-		</div>
-		<h1>Florian Große - Steuerfachwirt</h1>
-		<div class="row">
-			<div class="span12 text-center anchor">
-				<a name="get_started"></a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span12 text-center">
-				<h2>Get started right away!</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div clasS="span4 text-center">
-				<p>You can download the UMAP components from github and start using it
-				right away!</p>
-				<a href="https://github.com/michelluther/umap"
-				class="btn btn-primary"><i class="icon-download-alt icon-white"></i> Get UMAP from Github</a>
-			</div>
-			<div clasS="span4 text-center">
-				<p>We try to document the project in our Wiki so it is very easy to
-				use and contribute to.</p>
-				<a href="	ttps://github.com/michelluther/umap/wiki"
-				class="btn btn-primary"><i class="icon-book icon-white"></i> Go to Documentation</a>
-			</div>
-			<div class="span4 text-center">
-				<p>We are very happy about every person who contributes to the
-					betterment of UMAP. Be it by filing bugs, or by fixing them or even
-				by implementing new features</p>
-				<a href="https://github.com/michelluther/umap/issues"
-				class="btn btn-primary">Contribute</a>
-			</div>
-		</div>
-		<?php include 'views/banner.php';?>
-		<div id="content" class="container">
-			<?php include 'views/get_started.php'; ?>
-			<?php include 'views/abstract.php'; ?>
-			<?php include 'views/features.php'; ?>
-			
-			<?php include 'views/contact.php'; ?>
-		</div>
-		<script src="jquery/dist/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="bootstrap/dist/js/bootstrap.min.js"></script>
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Florian Große</title>
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    h1 {
+        margin-top: 80px;
+    }
+    
+    h2 {
+        margin-top: 50px;
+        text-decoration: none !important;
+    }
+    
+    h1,
+    h2,
+    sub {
+        font-family: 'Droid Serif', serif;
+        align: center;
+        color: #999;
+    }
+    
+    p {
+        color: #444;
+    }
+    
+    .heroUnit {
+        background-color: #E0DFDD;
+        border-top: 1px solid #C0BFBD;
+        height: 200px;
+    }
+    
+    .tile {
+        width: 150px;
+        height: 160px;
+        background-color: #fff;
+        transition: background 0.2s;
+        display: inline-block;
+        list-style: none;
+        float: left;
+        -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+        text-align: left;
+        margin: 20px 50px 20px 50px;
+        padding: 0px;
+    }
+    
+    div.tile:hover {
+        background-color: #eaeaea;
+        transition: background 0.2s;
+    }
+    
+    .tileheader {
+        background-color: #4D8799;
+        padding: 10px;
+        margin-top: 0;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .tilesContainer {
+        text-align: center;
+    }
+    
+    .tileContent {
+        font-size: 12px;
+        margin: 10px;
+        height: 100px;
+        display: inline-block;
+    }
+    
+    .headerImage {
+        float: right;
+        margin-top: -130px;
+        margin-bottom: -30px;
+    }
+    
+    .bgPerson {
+        background: url("img/bg_tile_person.png") no-repeat bottom right #fff
+    }
+    
+    .bgBriefcase {
+        background: url("img/bg_tile_briefcase.png") no-repeat bottom right #fff
+    }
+    
+    .bgPaperplane {
+        background: url("img/bg_tile_paperplane.png") no-repeat bottom right #fff
+    }
+    
+    .navlistItem {
+        list-style: none;
+    }
+    
+    .navList {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+    }
+
+    .siteHeader {
+        background: url("img/bg_header.png") no-repeat bottom center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+
+        </div>
+
+    </div>
+    <div class="container siteHeader">
+        <div class="row">
+            <h1 class="span12 text-center anchor">Florian Große<br />
+            <sub>B&uuml;roservice</sub></h1>
+        </div>
+        <!-- <img src="img/roundball.png" class="headerImage" /> -->
+    </div>
+    <div class="row heroUnit">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0 tilesContainer">
+                    <ul class="navList">
+                        <li class="navlistItem">
+                            <a href="#aboutme">
+                                <div class="tile bgPerson">
+                                    <h4 class="tileheader">&Uuml;ber mich</h4>
+                                    <p class="tileContent">Wen Sie erwarten können und vor allem wann ich vorbeikomme</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="navlistItem">
+                            <a href="#services">
+                                <div class="tile bgBriefcase">
+                                    <h4 class="tileheader">Leistungen</h4>
+                                    <p class="tileContent">Was Sie von mir erwarten können</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="navlistItem">
+                            <a href="#services">
+                                <div class="tile bgPaperplane">
+                                    <h4 class="tileheader">Kontakt</h4>
+                                    <p class="tileContent"><strong>Email:</strong> info@floriangrosse.de
+                                        <!-- <br/> -->
+                                        <strong>Telefon:</strong> +49 174 123 21 31</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="span12 text-center">
+                <a name="aboutme">
+                    <h2>&Uuml;ber mich</h2></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-md-offset-2">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Downloads</h3>
+                <ul>
+                    <li>Lebenslauf</li>
+                    <li>Zertifikat</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12 text-center">
+                <a name="services">
+                    <h2>Leistungen</h2>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-md-offset-2">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Downloads</h3>
+                <ul>
+                    <li>Lebenslauf</li>
+                    <li>Zertifikat</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12 text-center">
+                <a name="contact">
+                    <h2>Kontakt</h2>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-md-offset-2">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Downloads</h3>
+                <ul>
+                    <li>Lebenslauf</li>
+                    <li>Zertifikat</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
 </html>
